@@ -25,9 +25,9 @@ const formSubmitted = () => {
 
 function postCat(cat) {
     $.ajax({
-        url:'/api/cat',
-        type:'POST',
-        data:cat,
+        url: '/api/cat',
+        type: 'POST',
+        data: cat,
         success: (result) => {
             if (result.statusCode === 201)
                 alert('cat added');
@@ -36,7 +36,7 @@ function postCat(cat) {
 };
 
 
-function getAllCats(){
+function getAllCats() {
     $.get('/api/cat', (response) => {
         if (response.statusCode === 200) {
             addCards(response.data);
@@ -47,9 +47,9 @@ function getAllCats(){
 
 $(document).ready(function () {
     $('.materialboxed').materialbox();
-    $('#formSubmit').click(()=>{
+    $('#formSubmit').click(() => {
         formSubmitted();
     });
     $('.modal').modal();
-    getAllCats(); 
+    getAllCats();
 });

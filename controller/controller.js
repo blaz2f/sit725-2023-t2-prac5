@@ -18,5 +18,5 @@ function getAllCats(req, res) {
     });
 }
 
-module.exports = {insertCat, getAllCats}
+module.exports = { insertCat, getAllCats }
 

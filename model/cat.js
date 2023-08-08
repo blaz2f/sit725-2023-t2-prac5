@@ -7,8 +7,8 @@ function insertCat(cat, callback) {
     collection.insertOne(cat, callback);
 }
 
-  function getAllCats(callback) {
-    callback =  collection.find({}).toArray(callback);
-    }
+function getAllCats(callback) {
+    callback = collection.find({}).toArray(callback);
+}
 
-module.exports = {insertCat, getAllCats}
+module.exports = { insertCat, getAllCats }
